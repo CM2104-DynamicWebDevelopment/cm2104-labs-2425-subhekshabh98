@@ -40,9 +40,6 @@ app.get('/calc', function (req, res) {
 
 });
 
-
-
-
 app.get('/getform', function (req, res) {
     var name = req.query.name;
     var quest = req.query.quest;
