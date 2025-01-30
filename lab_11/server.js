@@ -18,19 +18,19 @@ app.get('/add', function(req, res){
         var x = parseInt(req.query.x);
         var y = parseInt(req.query.y);
         if (operator=== "add"){
-            res.send ("x+y"=(x+y));
+            res.send ("x+y="+(x+y));
         }
          else if (operator=== "sub"){
-            res.send ("x-y"=(x-y));
+            res.send ("x-y="+(x-y));
         }
         
         else if (operator=== "mul"){
-            res.send ("x*y"=(x*y));
+            res.send ("x*y="+(x*y));
          }
         else (operator=== "div"){
-            res.send ("x/y"=(x/y));
+            res.send ("x/y="+(x/y));
         }
         
         });
-        
+
 app.listen(8080);
