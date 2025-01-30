@@ -41,3 +41,9 @@ app.get('/add', function(req, res){
 app.listen(8080);
 
 app.use(express.static('public'));
+app.get('/getform', function(req, res){
+    var name = req.query.name;
+    var quest = req.query.quest;
+     res.send("Hi "+name+" I am sure you will "+quest) ;
+    });
+    
