@@ -12,12 +12,16 @@ app.get('/test', function(req, res){
 app.get('/add', function(req, res){
     var x = parseInt(req.query.x);
     var y = parseInt(req.query.y);
-    var operator = req.query.operator;
+    
+
      res.send("X + Y="+(x+y));
     });
+
+
     app.get('/calc', function(req, res){
         var x = parseInt(req.query.x);
         var y = parseInt(req.query.y);
+        var operator = req.query.operator;
         if (operator=== "add"){
             res.send ("x+y="+(x+y));
         }
