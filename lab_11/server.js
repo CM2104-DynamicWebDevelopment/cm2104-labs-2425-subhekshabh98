@@ -10,9 +10,9 @@ app.get('/test', function(req, res){
 });
 
 app.get('/add', function(req, res){
-    var x = req.query.x;
-    var y = req.query.y;
+    var x = parseInt(req.query.x);
+    var y = parseInt(req.query.y);
      res.send("X + Y="+(x+y));
     });
-    
+
 app.listen(8080);
