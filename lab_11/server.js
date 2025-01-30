@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}))
 
 app.get('/', function(req, res){
     res.send("Hello world! by express");
@@ -38,9 +40,9 @@ app.get('/add', function(req, res){
         
         });
 
-app.listen(8080);
 
-app.use(express.static('public'));
+
+
 app.get('/getform', function(req, res){
     var name = req.query.name;
     var quest = req.query.quest;
@@ -52,4 +54,6 @@ app.get('/getform', function(req, res){
         var quest = req.body.quest;
          res.send("Hi "+name+" I am sure you will "+quest) ;
     });
-    app.use(express.urlencoded({extended:true}))
+    
+    
+    app.listen(8080);
