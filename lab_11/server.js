@@ -26,8 +26,8 @@ app.get('/add', function(req, res){
         
         else if (operator=== "mul"){
             res.send ("x*y="+(x*y));
-         }
-        else (operator=== "div"){
+        }
+        else  if(operator=== "div"){
             res.send ("x/y="+(x/y));
         }
         
