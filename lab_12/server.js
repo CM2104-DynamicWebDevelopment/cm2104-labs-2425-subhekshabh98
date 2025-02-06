@@ -84,6 +84,12 @@ spotifyApi.clientCredentialsGrant().then(
         res.send("Hi " + name + " I am sure you will " + quest);
     });
 
+    app.post('/postform', function (req, res) {
+        var name = req.body.name;
+        var quest = req.body.quest;
+        res.send("Hi " + name + " I am sure you will " + quest);
+    });
+
     
     app.get('/search', function (req, res) {
         var searchterm = req.query.searchterm;
