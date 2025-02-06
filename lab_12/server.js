@@ -65,7 +65,7 @@ spotifyApi.clientCredentialsGrant().then(
         "<div>" +
             "<h2>"+track.name+"</h2>"+
             "<h4>"+track.artists[0].name+"</h4>"+
-            "<img src='"+track.album.images[0].url +"'>"+
+            "<img src='"+track.album.images[0].url +">"+
             "<a href='"+track.external_urls.spotify+"'> Track Details </a>"+
         "</div>";
             console.log(HTMLResponse);
