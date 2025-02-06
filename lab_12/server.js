@@ -78,7 +78,7 @@ spotifyApi.clientCredentialsGrant().then(
     
     //route for searching in tracks, artists and albums
     
-    app.get('/postform', function (req, res) {
+    app.post('/postform', function (req, res) {
         var searchterm = req.query.searchterm;
         getTracks(searchterm, res);
    });
