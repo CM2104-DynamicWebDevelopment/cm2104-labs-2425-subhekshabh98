@@ -49,7 +49,7 @@ spotifyApi.clientCredentialsGrant().then(
     app.get('/searchLove', function (req, res) {
         getTracks('love', res);
     });
-   
+    async function getTracks(searchterm, res) { 
     spotifyApi.searchTracks(searchterm)
         .then(function (data) {
         var tracks = data.body.tracks.items 
@@ -73,6 +73,6 @@ spotifyApi.clientCredentialsGrant().then(
             res.send(HTMLResponse)
         }, function (err) {
             console.error(err);
-        });
+        })};
 
     app.listen(8080);
