@@ -75,4 +75,30 @@ spotifyApi.clientCredentialsGrant().then(
             console.error(err);
         })};
 
+    
+    //route for searching in tracks, artists and albums
+    app.get('/search', function (req, res) {
+        var searchterm = req.query.searchterm;
+        getTracks(searchterm, res);
+   });
+   
+   async function getTopTracks(artist, res) {
+        spotifyApi.getArtistTopTracks(artist,'GB')
+        .then(function (data) {
+            console.log(data.body);
+        }, function (err) {
+            console.log('Something went wrong!', err);
+        });
+   }
+
+   async function getRelated(artist, res) {
+        spotifyApi.getArtistRelatedArtists(artist)
+            .then(function (data) {
+                console.log(data.body);
+        }, function (err) {
+                dconsole.log('Something went wrong!', err);
+        });
+   }
+   
+   
     app.listen(8080);
