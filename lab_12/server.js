@@ -8,7 +8,7 @@ app.listen(8080);
 
 var express = require('express')
 var app = express();
-var SpoifyWebApi = require('spotify-web-api-node');
+var SpotifyWebApi = require('spotify-web-api-node');
 app.use(express.static('public'));
 
 var spoifyApi = new SpotifyWebApi({
