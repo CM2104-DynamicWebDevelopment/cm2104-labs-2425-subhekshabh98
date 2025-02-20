@@ -16,10 +16,7 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
  res.render('pages/about');
 });
-// // index page
-// app.get('/', function(req, res) {
-// res.render('pages/index');
-// });
+
 // index page 
 app.get('/', function(req, res) {
     var drinks = [
@@ -29,8 +26,8 @@ app.get('/', function(req, res) {
     ];
     var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
     res.render('pages/index', {
-    drinks: drinks,
-    tagline: tagline
+        drinks: drinks,
+        tagline: tagline,
     });
    });
 
