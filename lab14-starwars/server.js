@@ -110,4 +110,6 @@ app.post('/update', function(req, res) {
     if (err) throw err;
     res.redirect('/');
   });
+
+  app.listen(8080);
 });
